@@ -1,0 +1,23 @@
+{
+  "name": "http-framework",
+  "version": "0.1.0",
+  "description": "An http testing framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"/node_modules/mocha/bin/mocha test/test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvicklund/http-framework.git"
+  },
+  "keywords": [
+    "http",
+    "framework"
+  ],
+  "author": "David Vicklund dvicklund@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dvicklund/http-framework/issues"
+  },
+  "homepage": "https://github.com/dvicklund/http-framework#readme"
+}
