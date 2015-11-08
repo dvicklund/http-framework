@@ -1,6 +1,7 @@
 var mocha = require('mocha');
 var chai = require('chai');
 var expect = require('chai').expect;
+// This file path will be changed to file of implementation.
 var resWriteHead = require(__dirname + '/../lib/write-head.js');
 
 describe('the resWriteHead function', function(){
