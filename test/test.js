@@ -2,6 +2,8 @@ var chai = require('chai');
 var logger = require('/lib/logger');
 
 describe('logging module', function() {
+  
+  
   it('should receive requests', function() {
 
   })
