@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/dvicklund/http-framework/issues"
   },
-  "homepage": "https://github.com/dvicklund/http-framework#readme"
+  "homepage": "https://github.com/dvicklund/http-framework#readme",
+  "devDependencies": {
+    "chai": "^3.4.1"
+  }
 }
