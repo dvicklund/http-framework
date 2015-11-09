@@ -1,6 +1,7 @@
 var expect = require('chai').expect;
 var logger = require(__dirname + '/../lib/logger');
 var Router = require(__dirname + '/../lib/router');
+var http = require('http');
 
 describe('router functionality', function() {
   beforeEach(function() {
@@ -12,23 +13,27 @@ describe('router functionality', function() {
     this.res = {
       test: 'sometest'
     };
-    this.handler = function(req, res){
-      console.log('Route handled');
-    };
     this.redirect = 'newurl';
+    this.cbFlag = false;
+    this.handler = function(req, res){
+      this.cbFlag = true;
+      console.log('Route handled');
+    }.bind(this);
     this.redirectHandler = function(req, res) {
+      this.cbFlag = true;
       console.log('Redirect handled');
-    };
+    }.bind(this);
   });
 
   it('should create a standard GET route', function() {
     this.req.method = 'GET';
-    // set the route object
+    // set the route object and invoke getRoute
     this.router.setRoute(this.req.method, this.req.url, this.handler);
+    this.router.getRoute(this.req, this.res);
     var testHandler = this.router.routes[this.req.method][this.req.url];
 
     expect(testHandler).to.eql(this.handler);
-    //Does not return as expected --> expect(this.router.getRoute(this.req, this.res)).to.eql('Request handled');
+    expect(this.cbFlag).to.eql(true);
   });
 
   it('should create a redirection', function() {
@@ -46,7 +51,9 @@ describe('router functionality', function() {
     // set the route object with redirect
     this.router.setRoute(this.req.method, this.req.url, this.handler);
     this.router.setRedirect(this.req.url, this.redirect, 301);
+    this.router.setRoute(this.req.method, this.redirect, this.redirectHandler);
+    this.router.getRoute(this.req, this.res);
 
-    //Does not return as expected --> expect(this.router.getRoute(this.req, this.res)).to.eql('Redirect handled');
+    expect(this.cbFlag).to.eql(true);
   });
 });
