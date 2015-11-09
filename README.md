@@ -3,27 +3,24 @@
 
 ## Functions
 
-...+ Url Request/Response Logger
+   + Url Request/Response Logger
 
-.......```javascript
 
-...+ Redirect Support
+   + Redirect Support
 
-.......```javascript
-.......Router.setRoute(method, route, handler);
+        Router.setRoute(method, route, handler);
 
-.......Router.setRedirect(url, redirect, type);
+        Router.setRedirect(url, redirect, type);
 
-.......Router.getRoute(req, res);
+        Router.getRoute(req, res);
 
-.......Router.getRedirect(url);
-```
+        Router.getRedirect(url);
 
-...+ Response writeHead encapsulation
 
-.......```javascript
-.......resWriteHead('status code', 'MIME-type needs to be in quotations as usual');
-```
+   + Response writeHead encapsulation
+
+   resWriteHead('status code', 'MIME-type needs to be in quotations as usual');
+
 
 
 ## License: MIT
