@@ -26,17 +26,19 @@ describe('router functionality', function() {
     // set the route object
     this.router.setRoute(this.req.method, this.req.url, this.handler);
 
-    expect(testRoute[handler]).to.eql(this.handler);
+    expect(testRoute).to.eql(this.handler);
+    expect(this.router.getRoute(this.req, this.res)).to.eql('Request handled');
   }.bind(this));
 
   it('should create a redirection', function() {
     this.req.method = 'GET';
     var testRoute = this.router.routes[this.req.url];
     // set the route object
-    this.router.setRoute(this.req.method, this.req.url, this.handler, this.redirect);
+    this.router.setRoute(this.req.method, this.req.url, this.handler);
+    this.router.setRedirection(this.req.url, this.redirect, 301);
 
-    expect(testRoute[redirect]).to.eql(true);
-    expect(testRoute[redirectURL]).to.eql('newurl');
+    expect(this.router.getRedirect[this.req.url].redirect).to.eql(this.redirect);
+    expect(this.router.getRedirect[this.req.url].status).to.eql(301);
   }.bind(this));
 
   it('should return a redirection', function() {
@@ -44,5 +46,6 @@ describe('router functionality', function() {
     var testRoute = this.router.routes[this.req.url];
 
     expect(this.router.getRoute(this.req, this.res)).to.eql('Redirect handled');
+    expect(testRoute(this.req, this.res)).to.eql('newurl');
   }.bind(this));
 });
