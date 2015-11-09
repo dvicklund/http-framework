@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/dvicklund/http-framework#readme",
   "devDependencies": {
-    "chai": "^3.4.1"
+    "chai": "^3.4.1",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-mocha": "^2.1.3"
   }
 }
