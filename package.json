@@ -1,7 +1,7 @@
 {
-  "name": "http-framework",
+  "name": "router-sprouter",
   "version": "0.1.0",
-  "description": "An http testing framework",
+  "description": "An http routing, logging, framework",
   "main": "index.js",
   "scripts": {
     "test": "\"/node_modules/mocha/bin/mocha test/test.js\""
@@ -15,6 +15,7 @@
     "framework"
   ],
   "author": "David Vicklund dvicklund@gmail.com",
+  
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dvicklund/http-framework/issues"

@@ -4,7 +4,7 @@ var Router = require(__dirname + '/lib/router');
 var router = new Router();
 
 http.createServer(function(req, res) {
-  router.route(req, res);
+  router.getRoute(req, res);
 }).listen(3000, function() {
   console.log('server up');
 });
