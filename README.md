@@ -7,9 +7,11 @@
 
 Then, require the package into your project.
 
-`var Router = require ('router-sprouter');
+```
+var Router = require ('router-sprouter');
 
-var router = new Router();`
+var router = new Router();
+```
 
 ## Usage:
 
