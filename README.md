@@ -1,9 +1,33 @@
 [![Stories in Ready](https://badge.waffle.io/dvicklund/http-framework.png?label=ready&title=Ready)](https://waffle.io/dvicklund/http-framework)
 # HTTP-Framework
 
+## Installation
+
+    `npm install <package>`
+
+    then require the package into your project
+    `var Router = require ('<package>');
+    var router = new Router();`
+
+## Usage:
+
+    To properly use the router, first create a separate file(s) with your request/response handler functions. For example:
+
+    ```
+    function upload() {
+        /* put handler functionality here */
+    }
+
+    Then, register your handlers with the router via the Router.setRoute() method.
 
 
 ## Functions:
+
+   + Basic Router
+
+        Router.setRoute(method, route, handler);
+
+        Router.getRoute(req, res);
 
    + Url Request/Response Logger
 
@@ -24,11 +48,7 @@
 
    + Redirect Support
 
-        Router.setRoute(method, route, handler);
-
         Router.setRedirect(url, redirect, type);
-
-        Router.getRoute(req, res);
 
         Router.getRedirect(url);
 
@@ -36,7 +56,6 @@
    + Response writeHead encapsulation
 
         resWriteHead(status code, 'MIME-type');
-
 
 
 ## License: MIT
