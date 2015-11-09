@@ -1,7 +1,9 @@
 [![Stories in Ready](https://badge.waffle.io/dvicklund/http-framework.png?label=ready&title=Ready)](https://waffle.io/dvicklund/http-framework)
 # HTTP-Framework
 
-## Functions
+
+
+## Functions:
 
    + Url Request/Response Logger
 
@@ -39,7 +41,7 @@
 
 ## License: MIT
 
-Copyright (c) <2015>
+Copyright (c) <2015> <David Vicklund, Ryan Heathers, Jack Sneed>
 
 
 
