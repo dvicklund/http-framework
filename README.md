@@ -3,11 +3,12 @@
 
 ## Installation:
 
-`npm install <package>`
+`npm install router-sprouter`
 
 Then, require the package into your project.
 
-`var Router = require ('<package>');
+`var Router = require ('router-sprouter');
+
 var router = new Router();`
 
 ## Usage:
