@@ -33,7 +33,7 @@
 
    + Response writeHead encapsulation
 
-   resWriteHead('status code', 'MIME-type needs to be in quotations as usual');
+        resWriteHead(status code, 'MIME-type');
 
 
 
