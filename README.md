@@ -1,9 +1,45 @@
 [![Stories in Ready](https://badge.waffle.io/dvicklund/http-framework.png?label=ready&title=Ready)](https://waffle.io/dvicklund/http-framework)
 # HTTP-Framework
 
+## Installation:
 
+`npm install router-sprouter`
+
+Then, require the package into your project.
+
+```
+var Router = require ('router-sprouter');
+
+var router = new Router();
+```
+
+## Usage:
+
+To properly use the router, first create a separate file(s) with your request/response handler functions. For example:
+
+```
+function upload() {
+    /* put handler functionality here */
+}
+```
+
+Then, register your handlers with the router via the Router.setRoute() method.
+
+## Redirection:
+
+The router allows you to register redirections for any incoming urls with the setRedirect() method. You can also set a redirection status of either 301 or 302. When the router detects that an incoming request is pointed at a redirected url, it will automatically re-point the url to the correct request handler.
+
+Be sure to have set up a route handler (via setRoutes()) for your redirection url, otherwise setting a redirect will result in a 404 error.
+
+You can check if a url has a registered redirect with the getRedirect() method.
 
 ## Functions:
+
+   + Basic Router
+
+        Router.setRoute(method, route, handler);
+
+        Router.getRoute(req, res);
 
    + Url Request/Response Logger
 
@@ -24,11 +60,7 @@
 
    + Redirect Support
 
-        Router.setRoute(method, route, handler);
-
         Router.setRedirect(url, redirect, type);
-
-        Router.getRoute(req, res);
 
         Router.getRedirect(url);
 
@@ -36,7 +68,6 @@
    + Response writeHead encapsulation
 
         resWriteHead(status code, 'MIME-type');
-
 
 
 ## License: MIT
