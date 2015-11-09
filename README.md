@@ -5,6 +5,20 @@
 
    + Url Request/Response Logger
 
+        Logger.logReq(req);
+
+        Logger.logRes(res);
+
+        Logger.clearResLogs();
+
+        Logger.clearReqLogs();
+
+        Logger.makeReqLog(req);
+
+        Logger.makeResLog(res);
+
+        Logger.writeFile(logFolder, data);
+
 
    + Redirect Support
 
@@ -25,7 +39,7 @@
 
 ## License: MIT
 
-Copyright (c) <2015> <'copyright holders'>
+Copyright (c) <2015>
 
 
 
