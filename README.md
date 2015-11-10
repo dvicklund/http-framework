@@ -58,6 +58,20 @@ myRouter.get('/awesome', function(req, res){
 });
 ```
 
+## Logging:
+
+Router Sprouter contains a couple helpful methods to auto-generate logs with each request and response.  You must implicitly call logger.logReq(req) at the point at which you want to log the request/response.  For example, to log the req and res from the above function:
+
+```
+myRouter.get('/awesome', function(req, res){
+**logger.logReq(req);**
+  resWriteHead(200, 'text/plain');
+  res.write('wow, so awesome, such router');
+  res.end();
+**logger.logRes(res);**
+});
+```
+
 ## Functions:
 
    + Basic Router
