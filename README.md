@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/dvicklund/http-framework.svg?branch=master)](https://travis-ci.org/dvicklund/http-framework)
 [![Stories in Ready](https://badge.waffle.io/dvicklund/http-framework.png?label=ready&title=Ready)](https://waffle.io/dvicklund/http-framework)
-# HTTP-Framework
 
 ## Installation:
 
