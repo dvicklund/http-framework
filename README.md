@@ -9,9 +9,7 @@
 Then, require the package into your project.
 
 ```
-var Router = require ('router-sprouter');
-
-var router = new Router();
+var router = require ('router-sprouter');
 ```
 
 ## Usage:
@@ -48,7 +46,6 @@ myRouter.get('/awesome', function(req, res){
 simply include in the resWriteHead function.
 ```
 myRouter.get('/awesome', function(req, res){
-~~res.writeHead(200, { 'Content-Type': 'text/plain'});~~
 **resWriteHead(200, 'text/plain');**
   res.write('wow, so awesome, such router');
   res.end();
