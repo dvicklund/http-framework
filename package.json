@@ -4,7 +4,7 @@
   "description": "An http routing, logging, framework",
   "main": "index.js",
   "scripts": {
-    "test": "mocha /test/redirect-test.js"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
