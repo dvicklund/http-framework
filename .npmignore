@@ -1,0 +1,7 @@
+# Build Helpers
+gulpfile
+.jshintrc
+
+# Testing
+.travis.yml
+*/test/**
