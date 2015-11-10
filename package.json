@@ -1,7 +1,7 @@
 {
   "name": "router-sprouter",
-  "version": "0.1.0",
-  "description": "An http routing, logging, framework",
+  "version": "0.1.1",
+  "description": "http router with logging, redirect support, and other helpers",
   "main": "index.js",
   "scripts": {
     "test": "gulp"
@@ -15,6 +15,14 @@
     "framework"
   ],
   "author": "David Vicklund david@vicklund.com",
+  "contributors": [{
+    "name": "Jack Sneed",
+    "email": "sneed.jack@gmail.com"
+  },
+  {
+    "name": "Ryan Heathers",
+    "email": "ryan@ryanheathers.com"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dvicklund/http-framework/issues"
