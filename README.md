@@ -60,7 +60,7 @@ myRouter.get('/awesome', function(req, res){
 
 ## Logging:
 
-Router Sprouter contains a couple helpful methods to auto-generate logs with each request and response.  You must implicitly call logger.logReq(req) at the point at which you want to log the request/response.  For example, to log the req and res from the above function:
+Router Sprouter contains a couple helpful methods to auto-generate logs with each request and response.  The logs generated will be stored (somewhat inconveniently) in your node_modules/router-sprouter/lib/log/ folder.  (Future versions will allow for custom log folder configuration)  You must implicitly call logger.logReq(req) at the point at which you want to log the request/response.  For example, to log the req and res from the above function, insert the following two lines of code:
 
 ```
 myRouter.get('/awesome', function(req, res){
@@ -70,6 +70,16 @@ myRouter.get('/awesome', function(req, res){
   res.end();
 **logger.logRes(res);**
 });
+```
+
+It can also clear each log folder upon the following function call:
+
+```
+// Clear request logs folder
+logger.clearReqLogs();
+
+// Clear response logs folder
+logger.clearResLogs();
 ```
 
 ## Functions:
@@ -89,12 +99,6 @@ myRouter.get('/awesome', function(req, res){
         Logger.clearResLogs();
 
         Logger.clearReqLogs();
-
-        Logger.makeReqLog(req);
-
-        Logger.makeResLog(res);
-
-        Logger.writeFile(logFolder, data);
 
 
    + Redirect Support
