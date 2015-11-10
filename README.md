@@ -34,6 +34,27 @@ Be sure to have set up a route handler (via setRoutes()) for your redirection ur
 
 You can check if a url has a registered redirect with the getRedirect() method.
 
+## Response writeHead:
+
+Instead of writing out response.WriteHead like so,
+
+```
+myRouter.get('/awesome', function(req, res){
+**res.writeHead(200, { 'Content-Type': 'text/plain'});**
+  res.write('wow, so awesome, such router');
+  res.end();
+});
+```
+simply include in the resWriteHead function.
+```
+myRouter.get('/awesome', function(req, res){
+~~res.writeHead(200, { 'Content-Type': 'text/plain'});~~
+**resWriteHead(200, 'text/plain');**
+  res.write('wow, so awesome, such router');
+  res.end();
+});
+```
+
 ## Functions:
 
    + Basic Router
