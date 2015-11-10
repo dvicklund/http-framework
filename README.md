@@ -11,6 +11,12 @@ Then, require the package into your project.
 ```
 var router = require ('router-sprouter');
 ```
+To use the Logger and resWriteHead modules, do the following:
+
+```
+var logger = require('router-sprouter').logger;
+var resWriteHead = require('router-sprouter').resWriteHead;
+```
 
 ## Usage:
 
