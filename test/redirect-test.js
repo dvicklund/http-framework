@@ -8,7 +8,12 @@ describe('router functionality', function() {
     this.router = new Router();
     this.req = {
       method: '',
-      url: 'testurl'
+      url: 'testurl',
+      headers: {
+        "user-agent": "curl/7.35.0",
+        "host": "localhost:3000",
+        'accept': "*/*"
+      }
     };
     this.res = {
       test: 'sometest'
