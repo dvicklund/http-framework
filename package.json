@@ -15,7 +15,6 @@
     "framework"
   ],
   "author": "David Vicklund dvicklund@gmail.com",
-  
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dvicklund/http-framework/issues"
@@ -25,6 +24,7 @@
     "chai": "^3.4.1",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.12.0",
-    "gulp-mocha": "^2.1.3"
+    "gulp-mocha": "^2.1.3",
+    "mocha": "^2.3.3"
   }
 }
